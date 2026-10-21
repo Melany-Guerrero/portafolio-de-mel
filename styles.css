@@ -1,9 +1,312 @@
 
-/* Estilos iniciales del portafolio de Melany Guerrero */
+/* Estilos del portafolio de Melany Guerrero */
 
 :root {
     --color-principal: #6c63ff;
     --color-fondo: #f7f7fc;
     --color-texto: #292943;
     --color-acento: #ff8fab;
+    --color-blanco: #ffffff;
+    --color-secundario: #e9e7ff;
+    --sombra: 0 8px 25px rgba(41, 41, 67, 0.08);
+}
+
+/* Configuración general */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Encabezado y navegación */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 8%;
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    color: var(--color-principal);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--color-acento);
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navegacion a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navegacion a:hover {
+    color: var(--color-principal);
+}
+
+/* Presentación principal */
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 75vh;
+    padding: 70px 10%;
+}
+
+.principal-contenido {
+    flex: 1;
+}
+
+.etiqueta {
+    color: var(--color-principal);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.principal h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.principal h1 span {
+    color: var(--color-principal);
+}
+
+.principal h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    max-width: 550px;
+    margin-bottom: 25px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #5148d8;
+    transform: translateY(-3px);
+}
+
+.principal-imagen {
+    flex: 0 1 320px;
+}
+
+.principal-imagen img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+/* Secciones generales */
+
+.seccion {
+    padding: 65px 10%;
+    scroll-margin-top: 20px;
+}
+
+.seccion h2 {
+    color: var(--color-principal);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#sobre-mi > p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Habilidades y proyectos */
+
+.lista-habilidades,
+.lista-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tarjeta-habilidad,
+.tarjeta-proyecto {
+    flex: 1 1 220px;
+    max-width: 350px;
+    padding: 25px;
+    background-color: var(--color-blanco);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.tarjeta-habilidad:hover,
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(41, 41, 67, 0.14);
+}
+
+.tarjeta-habilidad h3,
+.tarjeta-proyecto h3 {
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+/* Formulario de contacto */
+
+#contacto > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: var(--color-blanco);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    color: var(--color-texto);
+    border: 1px solid #d8d6e8;
+    border-radius: 8px;
+}
+
+.formulario-contacto textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: 2px solid var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+.formulario-contacto button {
+    padding: 13px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font: inherit;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #5148d8;
+}
+
+.nota-formulario {
+    color: #66667d;
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+/* Pie de página */
+
+.pie-pagina {
+    padding: 25px 8%;
+    text-align: center;
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+}
+
+.pie-pagina a {
+    color: var(--color-acento);
+}
+
+/* Adaptación a teléfonos y pantallas pequeñas */
+
+@media (max-width: 700px) {
+    .encabezado {
+        justify-content: center;
+    }
+
+    .navegacion {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .principal {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .principal-imagen img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .descripcion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .seccion {
+        padding: 45px 7%;
+    }
 }
