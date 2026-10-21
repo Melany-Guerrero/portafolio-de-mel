@@ -1,17 +1,14 @@
 
-/* Estilos del portafolio de Melany Guerrero */
-
 :root {
-    --color-principal: #6c63ff;
-    --color-fondo: #f7f7fc;
-    --color-texto: #292943;
-    --color-acento: #ff8fab;
+    --color-principal: #ff92af;
+    --color-fondo: #fdf8fa;
+    --color-texto: #a63d60;
+    --color-acento: #ff92af;
     --color-blanco: #ffffff;
-    --color-secundario: #e9e7ff;
-    --sombra: 0 8px 25px rgba(41, 41, 67, 0.08);
+    --color-secundario: #ffe4ec;
+    --sombra: 0 8px 25px rgba(166, 61, 96, 0.10);
 }
 
-/* Configuración general */
 
 * {
     box-sizing: border-box;
@@ -36,8 +33,6 @@ img {
     max-width: 100%;
     display: block;
 }
-
-/* Encabezado y navegación */
 
 .encabezado {
     display: flex;
@@ -75,8 +70,6 @@ img {
 .navegacion a:hover {
     color: var(--color-principal);
 }
-
-/* Presentación principal */
 
 .principal {
     display: flex;
@@ -130,7 +123,7 @@ img {
 }
 
 .boton:hover {
-    background-color: #5148d8;
+    background-color: #f87599;
     transform: translateY(-3px);
 }
 
@@ -147,8 +140,6 @@ img {
     border: 7px solid var(--color-blanco);
     box-shadow: var(--sombra);
 }
-
-/* Secciones generales */
 
 .seccion {
     padding: 65px 10%;
@@ -167,8 +158,6 @@ img {
     margin: 0 auto;
     text-align: center;
 }
-
-/* Habilidades y proyectos */
 
 .lista-habilidades,
 .lista-proyectos {
@@ -256,7 +245,7 @@ img {
 }
 
 .formulario-contacto button:hover {
-    background-color: #5148d8;
+    background-color: #f87599;
 }
 
 .nota-formulario {
@@ -264,8 +253,6 @@ img {
     font-size: 0.85rem;
     margin-top: 15px;
 }
-
-/* Pie de página */
 
 .pie-pagina {
     padding: 25px 8%;
