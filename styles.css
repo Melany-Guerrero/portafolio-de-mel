@@ -304,4 +304,22 @@ img {
     .seccion {
         padding: 45px 7%;
     }
+
+.lista-proyectos {
+    align-items: stretch;
+}
+
+.tarjeta-proyecto {
+    flex: 1 1 420px;
+    max-width: 600px;
+}
+
+.imagen-proyecto {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffe4ec;
+    object-fit: contain;
 }
